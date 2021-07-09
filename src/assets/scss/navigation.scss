@@ -1,0 +1,126 @@
+@import "__variables";
+
+.menu .menu--close2 .open .logo {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    filter: drop-shadow(3px 3px 5px #0000006e);
+    display: block;
+}
+
+nav {
+    border: 0;
+    position: fixed;
+    top: 0;
+    transition: height .3s, padding .3s;
+    align-items: center;
+    width: 100%;
+    right: 0;
+    padding: 0 45px 0 15px;
+    justify-content: space-between;
+    display: flex;
+    height: 100px;
+    
+    @media only screen and (max-width: 989px) {
+        clip-path: circle(150% at 100% 0%);
+    }
+   
+    z-index: 2;
+    overflow: hidden;
+
+    @media screen and (max-width: 989px) {
+        height: 100px;
+
+    }
+    background-color: #fff;
+
+    .logo {
+        @media screen and (min-width: 989px) {
+            display:flex;
+        }
+        img {
+            @media screen and (max-width: 446px) {
+                display: none;
+             }
+
+            @media screen and (max-width: 522px) {
+                max-width: 250px;
+            }
+            @media screen and (min-width: 567px) {
+                max-width: 365px;
+             }
+            max-width: 325px;
+        }
+        padding: 0 15px;
+        display: flex;
+        transition: all .5s;
+    }
+
+    ul.nav__container {
+
+        @media screen and (max-width: 989px) {
+            justify-content: center;
+            display: grid;
+
+        }
+
+        overflow: hidden;
+        display: flex;
+        list-style: none;
+        color: #000;
+        @media screen and (max-width: 989px) {
+            width: 100%;
+        }
+        margin: 0;
+
+        li.nav__item {
+            overflow: hidden;
+            @media screen and (max-width: 989px) {
+            opacity: 0;
+            }
+
+            a {
+                font-size: 1.1em;
+                @media screen and (max-width: 989px) {
+                color: rgba(255, 255, 255, 0.774);
+                }
+                color: rgba(0, 0, 0, 0.623);
+                transition: color .2s;
+
+                &:hover {
+                    transition: color .3s;
+                    text-decoration: none;
+                    @media screen and (min-width: 989px) {
+                       
+                        border-bottom: 4px solid #4d00ac26;
+                    }
+                    border-bottom: 4px solid #ffffff26;
+                    
+                }
+            }
+
+            padding: 20px 20px;
+
+            z-index: 1;
+            text-transform: uppercase;
+            font-weight: 550;
+
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+
+            &.active>a {
+                @media screen and (max-width: 989px) {
+                    color: #fff;
+                    }
+                    color: #000;
+                @media screen and (max-width: 989px) {
+                    border-bottom: 4px solid #fff;
+                    }
+               border-bottom: 4px solid $default-color;
+
+                font-weight: 550;
+            }
+        }
+    }
+}

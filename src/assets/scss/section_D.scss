@@ -1,0 +1,154 @@
+@import "__variables";
+
+.section__D {
+    background-color: #fff;
+    overflow: hidden;
+
+
+
+    h2 
+    {
+        background: #262626;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        padding: 10px 30px;
+        text-align: center;
+        margin: 45px auto 30px auto;
+        font-weight: 550;
+    }
+
+
+    .subsection:not(:last-child) {
+        background-color: #fff;
+        padding: 30px 45px;
+        padding-bottom: 45px;
+        text-align: center;
+        margin: 0 auto;
+
+
+    }
+
+    .section__desc {
+        .doc {
+            margin-right: 100px;
+
+            @media only screen and (max-width: 640px) {
+                display: none;
+            }
+
+        }
+
+      
+
+       
+
+        text-align: justify;
+      
+        font-weight: 500;
+        font-size: 1.3em;
+        margin: 0 auto;
+        margin-top: 1em;
+        word-break: keep-all;
+        display:flex;
+        align-items: center;
+    }
+
+    .image__container:last-of-type
+    {
+        margin: 0 auto;
+        grid-gap: 20px;
+        @media only screen and (min-width:800px) {
+
+
+            grid-template-columns: repeat(3, 1fr);
+            display: grid;
+        }
+
+        @media only screen and (max-width:540px) {
+
+
+            grid-template-columns: repeat(1, .7fr);
+            display: grid;
+        }
+    }
+    .image__container {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+
+        @media only screen and (min-width:800px) {
+
+
+            grid-template-columns: repeat(4, 1fr);
+            display: grid;
+        }
+
+        @media only screen and (max-width:540px) {
+
+
+            grid-template-columns: repeat(1, .7fr);
+            display: grid;
+        }
+
+
+
+        position: relative;
+        justify-content: center;
+
+        &>.container__elem {
+            
+            &:first-child {
+                margin-left: 0%;
+            }
+
+            &:last-child {
+                margin-right: 0%;
+                & > .h__r
+                {
+                   
+                        margin-bottom:100px
+                    
+                }
+            }
+        }
+
+        &>.container__elem {
+
+            position: relative;
+            margin: 0 auto !important;
+
+            @media only screen and (max-width:576px) {
+
+                margin: 0 auto !important;
+            }
+
+            &:not(:last-child) {
+                @media only screen and (max-width:576px) {
+
+
+                    margin-bottom: 35%;
+
+
+                }
+            }
+
+
+            &>.h__r {
+               
+                background-color: #fff;
+                padding: 2px 2px;
+
+                &>img {
+                    padding: 2px 2px;
+                }
+
+
+
+            }
+
+           
+        }
+    }
+
+
+}
